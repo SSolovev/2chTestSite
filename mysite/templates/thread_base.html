@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load extra_tags %}
+{% block header %}
+
+<div id="banner"><img src="{{ STATIC_URL }}img/banner.jpg" alt="banner" title="banner"/>
+
+    <div align="left">
+
+        {% if user.is_authenticated %}
+        <a href="{% url logout_page %}">Logout</a>&nbsp;
+        <b>Hello, {{user}}</b>
+        {%else%}
+        <a href="{% url login_page %}">Login</a>&nbsp;
+        <a href="{% url register_page %}">Registration</a>&nbsp;
+        {%endif%}
+
+        <a href="{% url admin:index %}">Entrance for administrator</a>
+    </div>
+</div>
+
+<div id="bannerb">
+    <h1><span class="orange">Orange</span> Forum</h1>
+    {% show_cat %}
+</div>
+
+<div id="navcontainer">
+    <ul id="navlist">
+        <li><a href="{% url main %}{{ subcat.id }}">{{ subcat.subcategory }}</a></li>
+    </ul>
+</div>
+
+{% endblock %}
+
+    {% block content %}
+    THIS IS CONTENT!
+    {% endblock %}

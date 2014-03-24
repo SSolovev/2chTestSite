@@ -1,0 +1,10 @@
+<ul>
+
+
+    {% for new in news %}
+    <li> [<a href="{% url main %}{{new.subcategory_id}}">{{new.subcategory}}</a>] <a href="{% url main %}{{new.subcategory_id}}/{{ new.id }}">{{ new.title }}</a>
+    </li>
+    {% endfor %}
+
+</ul>
+

@@ -1,0 +1,193 @@
+[
+    {
+        "pk":1,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Hobby",
+            "description":"This category is for discussions about different hobbies"
+        }
+    },
+    {
+        "pk":2,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Hi-Tech",
+            "description":"This category is for discussions about new technologies"
+        }
+    },
+    {
+        "pk":3,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Talks",
+            "description":"This category is for simple talk"
+        }
+    },
+    {
+        "pk":4,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Boss",
+            "description":"This category is for Boss",
+            "auth_required":"True"
+        }
+    },
+    {
+        "pk":5,
+        "model":"forum.categories",
+        "fields":{
+            "category":"HR",
+            "description":"This category is for Boss",
+            "auth_required":"True"
+        }
+    },
+    {
+        "pk":1,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":2,
+            "subcategory":"C++",
+            "description":"This category is for discussions about different hobbies"
+        }
+    },
+    {
+        "pk":2,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":2,
+            "subcategory":"Java",
+            "description":"This category is for discussions about new technologies"
+        }
+    },
+    {
+        "pk":3,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":2,
+            "subcategory":"Python",
+            "description":"This category is for simple talk"
+        }
+    },
+    {
+        "pk":4,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":3,
+            "subcategory":"Voronezh",
+            "description":"This category is for Voronezh talks"
+        }
+    },
+    {
+        "pk":5,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":3,
+            "subcategory":"Peter",
+            "description":"This category is for Peter talks"
+        }
+    },
+    {
+        "pk":6,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":3,
+            "subcategory":"Moscow",
+            "description":"This category is for Moscow talks"
+        }
+    },
+    {
+        "pk":7,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":1,
+            "subcategory":"Football",
+            "description":"This category is for Football"
+        }
+    },
+    {
+        "pk":8,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":1,
+            "subcategory":"Basketball",
+            "description":"This category is for Basketball"
+        }
+    },
+    {
+        "pk":9,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":1,
+            "subcategory":"Volleyball",
+            "description":"This category is for Volleyball talk"
+        }
+    },
+    {
+        "pk":10,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":4,
+            "subcategory":"Stuffing",
+            "description":"This category is for Stuffing talk",
+            "auth_required":"True"
+        }
+    },
+    {
+        "pk":11,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":4,
+            "subcategory":"Idle",
+            "description":"This category is for Idle talk",
+            "auth_required":"True"
+        }
+    },
+    {
+        "pk":12,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":5,
+            "subcategory":"Managers",
+            "description":"This category is for Managers talk",
+            "auth_required":"True"
+        }
+    },
+    {
+        "pk":13,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":5,
+            "subcategory":"Audit",
+            "description":"This category is for Audit",
+            "auth_required":"True"
+        }
+    },
+    {
+        "pk":1,
+        "model":"forum.topics",
+        "fields":{
+            "title": "test java topic",
+            "description":"This top is for Java question",
+            "date": "2012-01-28 00:00:00",
+            "creator_name":"Vasya",
+            "subcategory":2,
+            "update_date": "2012-01-28 00:00:00"
+
+        }
+    },
+
+    {
+        "pk":2,
+        "model":"forum.topics",
+        "fields":{
+            "title": "test java topic 2",
+            "description":"This top is for Java2ee question",
+            "date": "2012-01-29 00:00:00",
+            "creator_name":"Petya",
+            "subcategory":2,
+            "update_date": "2012-01-29 00:00:00"
+        }
+    }
+
+
+]

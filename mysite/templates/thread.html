@@ -1,0 +1,65 @@
+{% extends "thread_base.html" %}
+{%block content%}
+<div>
+    THIS topic create :
+    {%if top%}
+    {{top.date|date:"j F Y H:i:s"}}
+    <p>CREATOR : {{top.creator_name|removetags:"script a"|safe}}</p>
+
+    <p>TITLE : {{top.title|removetags:"script a"|safe}}</p>
+
+    <p>DESCRIPTION : {{top.description|removetags:"script a"|safe}}</p>
+
+    {%if top.file_name%}<p>FILE : <img src="{{ MEDIA_URL }}{{top.file_name}}" width="150" height="100" alt="picture"/>
+</p>{%endif%}
+    {%endif%}
+
+</div>
+<div>
+    {%if messages%}
+
+    {%for message in messages reversed %}
+    <table bgcolor="white">
+        <div class="clear">&nbsp; </div>
+
+        <tr>
+            <td><b>{{message.creator_name|removetags:"script a"|safe}} : </b>
+                {{message.date|date:"j F Y H:i:s"}}
+            </td>
+        </tr>
+        <tr>
+            <td> {{message.message|removetags:"script a"|safe}}</td>
+            <td>{%if message.file_name%}<img src="{{ MEDIA_URL }}{{message.file_name}}" width="150" height="100"
+                                             alt="picture"/>{%endif%}
+            </td>
+        </tr>
+    </table>
+    {%endfor%}
+
+    {%endif%}
+</div>
+
+{%if form%}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+
+        {{ form.as_table }}
+
+        <tr>
+            <td colspan="2"><input type="submit" name="message" value="Send"/></td>
+        </tr>
+    </table>
+</form>
+{% else %}
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" name="reply" value="Reply"/></td>
+</form>
+{%endif%}
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" name="back" value="Back to threads"/></td>
+</form>
+{%endblock%}

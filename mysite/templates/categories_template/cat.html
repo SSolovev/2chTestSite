@@ -1,0 +1,11 @@
+<ul>
+    {% for cat in cats %}
+    <li> <a href="{% url main %}">{{ cat }}</a>:</li>
+    {% for subcat in subcats %}
+    {%if cat.id == subcat.category_id%}
+    <a href="{% url main %}{{ subcat.id }}">{{ subcat.subcategory }}</a>
+    {%endif%}
+    {% endfor %}
+    {% endfor %}
+</ul>
+

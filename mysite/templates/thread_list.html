@@ -1,0 +1,13 @@
+{% extends "thread_base.html" %}
+{%block content%}
+    THIS IS {{subcat}} subcategory
+    <form method="post" >
+        {% csrf_token %}
+        <input name="new_top" type="submit" value="Create new topic" />
+    </form>
+
+    {%for top in topics%}
+    <a href="{{path}}{{top.id}}"><p><b>{{top.title}}</b></p></a>
+    {%endfor%}
+
+{%endblock%}

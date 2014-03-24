@@ -1,0 +1,46 @@
+#header {
+    position: relative;
+    background: #fc3;
+}
+
+/*#footer {*/
+    /*background: #fc3; *//* Цвет фона */
+    /*border: 2px solid black; *//**//* Параметры рамки */
+    /*padding: 20px; *//* Поля вокруг текста */
+    /*margin-top: 30%; *//* Отступ сверху */
+    /*z-index: 2;*/
+/*}*/
+#footer p{width:928px; margin:7px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:12px; color:#e9e6c3; line-height:16px; font-weight:bold; text-align:center}
+#footer p a{color:#FFF; background:#252525; text-decoration:none}
+
+.colLeft{
+    width:200px;
+    background:#0CF;
+    float:left;
+    position:relative;
+    z-index:1;
+}
+.colRightContainer{
+    float:right;
+    width:100%;
+    margin-left:-200px;
+}
+.colRight{
+    margin-left:220px;
+}
+.colRight2{
+    width:200px;
+    background:#0CF;
+    float:right;
+    position:relative;
+    z-index:1;
+}
+.colCenterContainer{
+    float:left;
+    width:100%;
+    margin-right:-200px;
+}
+.colCenter{
+    margin-right:220px;
+    background:#CCC;
+}

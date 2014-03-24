@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>*ORANGE FORUM*</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+<div id="container">
+    {% block header %}
+    <div id="banner"><img src="{{ STATIC_URL }}img/banner.jpg" alt="banner" title="banner"/></div>
+
+    <div id="bannerb">
+
+        <h1><span class="orange">Orange</span> Forum</h1>
+
+
+        <div align="left">
+
+            {% if user.is_authenticated %}
+            <a href="{% url logout_page %}">Logout</a>
+            <b>Hello, {{user}}</b>
+            {%else%}
+            <a href="{% url login_page %}">Login</a>
+            <br><a href="{% url register_page %}">Registration</a>
+            {%endif%}
+
+
+            <br> <a href="{% url admin:index %}">Entrance for administrator</a>
+        </div>
+
+
+    </div>
+    {% endblock %}
+    <div class="topnav">
+
+        <div id="navcontainer">
+
+        </div>
+
+        <div class="clear">&nbsp; </div>
+
+    </div>
+    <!--<div style="height: 500px;">-->
+    {% block content %}
+
+    {% endblock %}
+    <!--</div>-->
+    <div id="footer">
+        {% block footer %}
+        <a href="{% url main %}">homepage</a> |
+        &copy; 2012 DataArt | Design by Sergey Inc.</a></div>
+    {% endblock %}
+</div>
+
+</body>
+
+</html>
+

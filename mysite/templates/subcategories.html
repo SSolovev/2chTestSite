@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{%block content%}
+<p>
+    Today is : {{current_time}}
+</p>
+
+<div id="sidebar">
+    <h1>This is hot!</h1>
+    {% load extra_tags %}
+    {%show_news%}
+
+</div>
+
+<div id="sidebar-b">
+
+    <h1>Specific categories</h1>
+    {%for auth_cat in auth_cats%}
+    <h3>{{auth_cat.category}}</h3>
+    {%for auth_subcat in auth_subcats%}
+    {%if auth_cat.id = auth_subcat.category.id %}
+    <a href="{{auth_subcat.id}}/"><p>{{auth_subcat.subcategory}}</p></a>
+    {%endif%}
+    {%endfor%}
+    {%endfor%}
+
+</div>
+
+<div id="content">
+
+    <h1>Categories</h1>
+    {%for cat in cats%}
+    <h3>{{cat.category}}</h3>
+    {%for subcat in subcats%}
+    {%if cat.id = subcat.category.id %}
+    <a href="{{subcat.id}}/"><p>{{subcat.subcategory}}</p></a>
+    {%endif%}
+    {%endfor%}
+    {%endfor%}
+
+</div>
+
+
+{%endblock%}

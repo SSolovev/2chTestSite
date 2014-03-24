@@ -1,0 +1,133 @@
+[
+    {
+        "pk":1,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Hobby",
+            "description":"This category is for discussions about different hobbies"
+        }
+    },
+    {
+        "pk":2,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Hi-Tech",
+            "description":"This category is for discussions about new technologies"
+        }
+    },
+    {
+        "pk":3,
+        "model":"forum.categories",
+        "fields":{
+            "category":"Talks",
+            "description":"This category is for simple talk"
+        }
+    },
+    {
+        "pk":1,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":2,
+            "subcategory":"C++",
+            "description":"This category is for discussions about different hobbies"
+        }
+    },
+    {
+        "pk":2,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":2,
+            "subcategory":"Java",
+            "description":"This category is for discussions about new technologies"
+        }
+    },
+    {
+        "pk":3,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":2,
+            "subcategory":"Python",
+            "description":"This category is for simple talk"
+        }
+    },
+    {
+        "pk":4,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":3,
+            "subcategory":"Voronezh",
+            "description":"This category is for Voronezh talks"
+        }
+    },
+    {
+        "pk":5,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":3,
+            "subcategory":"Peter",
+            "description":"This category is for Peter talks"
+        }
+    },
+    {
+        "pk":6,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":3,
+            "subcategory":"Moscow",
+            "description":"This category is for Moscow talks"
+        }
+    },
+    {
+        "pk":7,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":1,
+            "subcategory":"Football",
+            "description":"This category is for Football"
+        }
+    },
+    {
+        "pk":8,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":1,
+            "subcategory":"Basketball",
+            "description":"This category is for Basketball"
+        }
+    },
+    {
+        "pk":9,
+        "model":"forum.subcategories",
+        "fields":{
+            "category":1,
+            "subcategory":"Volleyball",
+            "description":"This category is for Volleyball talk"
+        }
+    },
+
+    {
+        "pk":1,
+        "model":"forum.topics",
+        "fields":{
+            "title": "test java topic",
+            "description":"This category is for Volleyball talk",
+            "date": "2012-01-28",
+            "creator_name":"Vasya",
+            "subcategory":2
+
+        }
+    },
+    {
+        "pk":2,
+        "model":"forum.topics",
+        "fields":{
+            "title": "test java topic 2",
+            "description":"This category is for Volleyball talk",
+            "date": "2012-01-29",
+            "creator_name":"Petya",
+            "subcategory":2
+
+        }
+    }
+
+]
